@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name List</title>
+</head>
+<body>
+    <h1>Registered Name</h1>
+    <table border="1"> 
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        {% for person in people %}
+        <tr>
+            <td>{{ person.name }}</td>
+            <td>{{ person.email }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2">No names registered yet.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
